@@ -1,1 +1,64 @@
-<p>add-user works!</p>
+<h2>Adicione um usuário</h2>
+
+<div>
+  <form [formGroup]="addUserForm">
+    <div>
+      <label for="">Nome</label>
+      <input type="text" formControlName="name">
+    </div>
+    <!-- ERROR -->
+    <div *ngIf="addUserForm.get('name')?.invalid && (addUserForm.get('name')?.dirty || addUserForm.get('name')?.touched)">
+      <div class="text-danger">Nome é obrigatório</div>
+    </div>
+    <!-- ERROR -->
+
+    <br>
+
+    <div>
+      <label for="">Email</label>
+      <input type="email" formControlName="email">
+    </div>
+   <!-- ERROR -->
+   <div *ngIf="addUserForm.get('email')?.invalid && (addUserForm.get('email')?.dirty || addUserForm.get('email')?.touched)">
+    <div class="text-danger">Por favor insira um e-mail válido</div>
+  </div>
+  <!-- ERROR -->
+
+    <br>
+
+    <div>
+      <label >Função</label>
+    <select formControlName="role">
+      <option value="EngFE">Engenheiro de FE</option>
+      <option value="EngBE">Engenheiro de BE</option>
+      <option value="AD">Analista de Dados</option>
+      <option value="LT">Líder Técnico</option>
+    </select>
+    </div>
+
+    <!-- ERROR -->
+    <div *ngIf="addUserForm.get('role')?.invalid && (addUserForm.get('role')?.dirty || addUserForm.get('role')?.touched)">
+      <div class="text-danger">Função é obrigatório</div>
+    </div>
+    <!-- ERROR -->
+
+    <br>
+
+    <div>
+      <label for="">Senha</label>
+      <input type="text" formControlName="password">
+    </div>
+
+    <!-- ERROR -->
+    <div *ngIf="addUserForm.get('password')?.invalid && (addUserForm.get('epasswordmail')?.dirty || addUserForm.get('password')?.touched)">
+      <div class="text-danger">Por favor insira uma senha entre 6 e 15 caracteres</div>
+    </div>
+    <!-- ERROR -->
+
+    <br>
+
+    <div>
+      <button (click)="addUser()">Salvar</button>
+    </div>
+  </form>
+</div>
