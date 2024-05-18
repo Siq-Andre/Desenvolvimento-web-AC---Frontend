@@ -31,6 +31,7 @@ body {
 .container {
   display: flex;
   vertical-align: middle;
+  padding: 50px;
 }
 
 .totalCadastradoFuncao .number {
@@ -40,9 +41,7 @@ body {
 
 div{
   text-align: center;
-  align-items: center;
   align-content: center;
-  text-align: center;
   justify-content: center;
 }
 
