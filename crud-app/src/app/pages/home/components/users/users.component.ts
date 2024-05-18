@@ -8,7 +8,9 @@ import { Router } from '@angular/router';
 })
 export class UsersComponent {
   userList = [
-    {nome: 'Andre', email: 'andre@gmail.com', funcao: 'Engenheiro de BE' }
+    {nome: 'Andre', email: 'andre@gmail.com', funcao: 'Engenheiro de BE' },
+    {nome: 'Rafael', email: 'rafael@gmail.com', funcao: 'Líder Técnico' },
+    {nome: 'Pedro', email: 'pedro@gmail.com', funcao: 'Analista de Dados' }
   ];
 
   constructor(private router: Router){
