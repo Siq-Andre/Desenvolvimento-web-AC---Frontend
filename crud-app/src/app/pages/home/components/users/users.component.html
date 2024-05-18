@@ -1,8 +1,34 @@
 <div class="container-fluid">
   <div class="row  align-items-center text-center full-height">
+    <div>
+      <h2>Usuarios</h2>
+    </div>
     <div class="col">
-      <h1>Welcome to users page</h1>
-      <h2>Here you can start building your amazing angular application</h2>
+
+      <table class="table table-dark table-hover table-item text-center">
+        <thead>
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Email</th>
+            <th scope="col">Função</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Excluir</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of userList; let i = index">
+            <td>{{ user.nome }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.funcao }}</td>
+            <td><img src="https://cdn-icons-png.flaticon.com/512/4192/4192928.png" class="icones" alt="icone de lapis" (click)="chamaEdita()"></td>
+            <td><img src="https://cdn-icons-png.flaticon.com/512/9972/9972749.png" class="icones" alt="icone x" (click)="excluiUsuario(user, i)"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div>
+        <button class="newUser" (click)="criaNovoUsuario()">Criar Novo usuario</button>
+      </div>
     </div>
   </div>
 </div>
