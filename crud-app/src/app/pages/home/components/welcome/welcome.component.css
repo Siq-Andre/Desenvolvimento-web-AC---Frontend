@@ -1,5 +1,5 @@
 body {
-  background-color: #f0f0f0; /* Cor de fundo da página */
+  background-color: #f0f0f0;
 }
 
 .container {
@@ -8,10 +8,10 @@ body {
 
 .totalCadastrados, .totalCadastradoFuncao {
   flex: 1;
-  background-color: #212529; /* Cor de fundo das caixas */
-  border-radius: 10px; /* Cantos arredondados nas caixas */
+  background-color: #212529;
+  border-radius: 10px;
   padding: 20px;
-  margin-right: 20px; /* Espaçamento entre as caixas */
+  margin-right: 20px;
   color:#f0f0f0;
   display: inline-block;
   flex-grow: 1;
@@ -31,6 +31,7 @@ body {
 .container {
   display: flex;
   vertical-align: middle;
+  padding: 50px;
 }
 
 .totalCadastradoFuncao .number {
@@ -40,9 +41,7 @@ body {
 
 div{
   text-align: center;
-  align-items: center;
   align-content: center;
-  text-align: center;
   justify-content: center;
 }
 
